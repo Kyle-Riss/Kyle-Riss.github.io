@@ -3,11 +3,10 @@
    Formal, minimal, content-first.
    ============================================================ */
 
-:root,
-[data-theme="light"] {
-  --bg: #fafaf7;
+:root {
+  --bg: #ffffff;
   --bg-elev: #ffffff;
-  --bg-soft: #f1f0ec;
+  --bg-soft: #f4f4f1;
   --border: rgba(17, 24, 28, 0.10);
   --border-strong: rgba(17, 24, 28, 0.18);
   --text: #14181c;
@@ -19,23 +18,6 @@
   --link-hover: #1a6b6e;
   --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.04);
   --shadow-md: 0 8px 28px rgba(16, 24, 40, 0.06);
-}
-
-[data-theme="dark"] {
-  --bg: #0f1213;
-  --bg-elev: #161a1c;
-  --bg-soft: #1c2123;
-  --border: rgba(229, 231, 235, 0.10);
-  --border-strong: rgba(229, 231, 235, 0.20);
-  --text: #e9edf1;
-  --text-muted: #a3acb6;
-  --text-faint: #6f7884;
-  --accent: #7fc6c9;
-  --accent-strong: #a4dadc;
-  --link: #7fc6c9;
-  --link-hover: #b3e2e3;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.30);
-  --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.45);
 }
 
 /* ----- Reset / base ----- */
@@ -126,22 +108,6 @@ p { margin: 0; }
   font-weight: 500;
 }
 .nav a:hover { color: var(--text); text-decoration: none; }
-
-.theme-toggle {
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg-elev);
-  color: var(--text);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease;
-}
-.theme-toggle:hover { border-color: var(--border-strong); }
-.theme-icon { font-size: 1rem; line-height: 1; }
 
 /* ============================================================
    Hero
@@ -236,7 +202,7 @@ p { margin: 0; }
   margin-left: 2px;
 }
 
-/* Real brand logos (img-based, served from simpleicons CDN) */
+/* Real brand logos (img-based, local SVGs) */
 img.ico.brand {
   display: inline-block;
   width: 16px;
@@ -246,9 +212,6 @@ img.ico.brand {
   /* Override currentColor inheritance — these are full-color brand assets */
   color: initial;
 }
-/* GitHub: switch between dark and light marks based on active theme */
-[data-theme="light"] .brand-dark { display: none; }
-[data-theme="dark"] .brand-light { display: none; }
 
 .hero-card {
   background: var(--bg-elev);
